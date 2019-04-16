@@ -123,7 +123,7 @@ describe 'ActiveRecord Obstacle Course' do
     # ------------------------------------------------------------
 
     # ------------------ Using ActiveRecord   
-      items = Item.find(ids_to_find).sort
+      items = Item.where(id: ids_to_find)
     # ------------------------------------------------------------
 
     # Expectation
@@ -138,7 +138,7 @@ describe 'ActiveRecord Obstacle Course' do
     # ------------------------------------------------------------
 
     # ------------------ Using ActiveRecord ----------------------
-     orders = Order.where(id: [@order_1, @order_3, @order_5, @order_7])
+     orders = Order.where(id: ids_to_find)
     # ------------------------------------------------------------
 
     # Expectation
